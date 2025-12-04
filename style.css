@@ -1,0 +1,171 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0b0f19;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+section {
+  padding: 60px 10%;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  background: #00c6ff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #0099cc;
+}
+
+/* ---- HERO SECTION ---- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #1a103d, #0b0f19);
+}
+
+.hero-text {
+  width: 55%;
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+}
+
+.hero-text span {
+  color: #00d9ff;
+}
+
+.hero-text h2 {
+  margin-top: 10px;
+  font-weight: 300;
+  color: #9bbdff;
+}
+
+.hero-text p {
+  margin-top: 20px;
+  width: 80%;
+  color: #cfd9f6;
+  font-size: 1.1rem;
+}
+
+.hero-img img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(0, 200, 255, 0.4);
+}
+
+/* ---- ABOUT SECTION ---- */
+.about {
+  text-align: center;
+}
+
+.about p {
+  width: 70%;
+  margin: 20px auto 0;
+  color: #cbd3f5;
+  font-size: 1.2rem;
+}
+
+/* ---- PROJECTS SECTION ---- */
+.projects h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #141a2e;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 35px rgba(0, 200, 255, 0.25);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  margin-top: 15px;
+}
+
+.project-card p {
+  color: #a8b7d9;
+  margin: 10px 0;
+}
+
+/* ---- CONTACT SECTION ---- */
+.contact h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 30px auto 0;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background: #1a2340;
+  color: #fff;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 130px;
+}
+
+form button {
+  width: 150px;
+  margin: auto;
+}
+
+/* ---- Fade-in Animations (used by JS) ---- */
+.about,
+.project-card,
+.contact {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease-out;
+}
+
+.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
