@@ -17,13 +17,13 @@ const portfolioData = {
       title: "Project One - Kanban Board",
       description:
         "A Kanban board application that dynamically manages tasks across stages, allowing users to add, move, and update items in real time.",
-      image: "project1.png",
+      image: "images/kanban-board.png",
     },
     {
       title: "Project Two - React Podcast Landing Page",
       description:
         "A responsive React landing page designed with modern UI components and a clean layout for an engaging first impression..",
-      image: "project2.png",
+      image: "images/desktop-view.png",
     },
   ],
 
