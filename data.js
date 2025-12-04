@@ -5,7 +5,7 @@ const portfolioData = {
     name: "Jodie Cloete",
     title: "Junior Web Developer",
     description: "I build clean, modern, beautiful user experiences.",
-    image: "profile.png",
+    image: "images/profile-image.png",
   },
 
   about: {
