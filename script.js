@@ -57,53 +57,69 @@ renderPortfolio(portfolioData);
 document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("particles");
   const ctx = canvas.getContext("2d");
+
+  // Set canvas size
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
   const particlesArray = [];
+  const numberOfStars = 150; // adjust how many stars
 
-  class Particle {
+  // Particle / Star class
+  class Star {
     constructor() {
       this.x = Math.random() * canvas.width;
       this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 3 + 1;
-      this.speedX = Math.random() * 1 - 0.5;
-      this.speedY = Math.random() * 1 - 0.5;
-      this.color = "rgba(255, 0, 212, 0.7)";
+      this.size = Math.random() * 2 + 1; // small size
+      this.speedX = Math.random() * 0.3 - 0.15;
+      this.speedY = Math.random() * 0.3 - 0.15;
+      this.opacity = Math.random();
+      this.delta = Math.random() * 0.02 + 0.01; // opacity change speed
     }
+
     update() {
       this.x += this.speedX;
       this.y += this.speedY;
+
+      // bounce off edges
       if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
       if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+
+      // twinkling effect
+      this.opacity += this.delta;
+      if (this.opacity <= 0 || this.opacity >= 1) this.delta *= -1;
     }
+
     draw() {
-      ctx.fillStyle = this.color;
-      ctx.shadowBlur = 10;
-      ctx.shadowColor = "#ff00bfff";
+      ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+      ctx.shadowBlur = 5;
+      ctx.shadowColor = "#fff";
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
     }
   }
 
-  function initParticles(num) {
-    for (let i = 0; i < num; i++) {
-      particlesArray.push(new Particle());
+  // Initialize stars
+  function initStars() {
+    for (let i = 0; i < numberOfStars; i++) {
+      particlesArray.push(new Star());
     }
   }
-  initParticles(100);
+  initStars();
 
+  // Animate stars
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particlesArray.forEach((p) => {
-      p.update();
-      p.draw();
+    particlesArray.forEach((star) => {
+      star.update();
+      star.draw();
     });
     requestAnimationFrame(animate);
   }
   animate();
 
+  // Handle window resize
   window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
