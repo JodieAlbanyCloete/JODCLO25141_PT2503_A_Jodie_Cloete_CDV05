@@ -3,13 +3,14 @@ console.log("script.js linked");
 const skills = ["HTML", "CSS", "SASS", "JS", "JQUERY", "GIT", "NPM"];
 
 const projects = [
-  { img: "kanban-board.png", title: "Project 1" },
-  { img: "desktop-view.png", title: "Project 2" },
+  { img: "images/kanban-board.png", title: "Project 1 - Kanban-board" },
+  { img: "images/desktop-view.png", title: "Project 2- Podacst Landing Page" },
 ];
 
 const contactInfo = {
   email: "cloete.jodie@gmail.com",
   phone: "+27 76 384 1892",
+  social: "LinkedIn",
 };
 
 // ----- MAIN RENDER FUNCTION -----
@@ -25,21 +26,6 @@ app.innerHTML = `
   ${contactSection()}
   ${footer()}
 `;
-
-// ----- COMPONENT FUNCTIONS -----
-
-// function navbar() {
-//   return `
-//     <header class="navbar">
-//       <nav>
-//         <a href="#about">About me</a>
-//         <a href="#skills">My skills</a>
-//         <a href="#portfolio">Portfolio</a>
-//         <a href="#contact">Contacts</a>
-//       </nav>
-//     </header>
-//   `;
-// }
 
 function hero() {
   return `
@@ -118,7 +104,7 @@ function contactSection() {
 function footer() {
   return `
     <footer class="footer">
-      <p>Copyright © 2025 Svetlana</p>
+      <p>Copyright © 2025 JodieC</p>
     </footer>
   `;
 }
