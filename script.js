@@ -84,6 +84,7 @@ function portfolioSection() {
                 <img src="${p.img}" alt="${p.title}">
                 <h3>${p.title}</h3>
                 <p>${p.description}</p>
+                  <h3><a href="${p.link}" target="_blank" rel="noopener noreferrer">${p.link}</a></h3>
                
             </div>
             

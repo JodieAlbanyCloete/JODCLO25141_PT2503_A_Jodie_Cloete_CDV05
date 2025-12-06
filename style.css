@@ -257,6 +257,13 @@ section h2 {
   margin-bottom: 6px;
 }
 
+.card a {
+  color: #00c6ff; /* accent color */
+  text-decoration: none; /* remove underline */
+  font-weight: 600;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
 /* --- FOOTER --- */
 .footer {
   margin-top: 32px;
