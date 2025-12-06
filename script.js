@@ -1,6 +1,6 @@
 console.log("script.js linked");
 
-const skills = ["HTML", "CSS", "SASS", "JS", "JQUERY", "GIT", "NPM"];
+const skills = ["HTML", "CSS", "REACT", "JS", "TAILWIND", "GIT", "NPM"];
 
 const projects = [
   { img: "images/kanban-board.png", title: "Project 1 - Kanban-board" },
