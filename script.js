@@ -3,8 +3,20 @@ console.log("script.js linked");
 const skills = ["HTML", "CSS", "REACT", "JS", "TAILWIND", "GIT", "NPM"];
 
 const projects = [
-  { img: "images/kanban-board.png", title: "Project 1 - Kanban-board" },
-  { img: "images/desktop-view.png", title: "Project 2- Podacst Landing Page" },
+  {
+    img: "images/kanban-board.png",
+    title: "Project 1 - Kanban-board",
+    description:
+      "A simple task management app to organize and track your workflow using a Kanban board - using HTML, CSS and Javascript.",
+    link: "https://github.com/JodieAlbanyCloete/JODCLO25141_PT2503_A_Jodie_Cloete_JSLPP",
+  },
+  {
+    img: "images/desktop-view.png",
+    title: "Project 2- Podacst Landing Page",
+    description:
+      "A responsive React podcast landing page showcasing content and interactive components.",
+    link: "https://github.com/JodieAlbanyCloete/JODCLO25141_PT2503_A_Jodie_Cloete_DJS03",
+  },
 ];
 
 const contactInfo = {
@@ -70,7 +82,11 @@ function portfolioSection() {
             (p) => `
               <div class="card">
                 <img src="${p.img}" alt="${p.title}">
-              </div>
+                <h3>${p.title}</h3>
+                <p>${p.description}</p>
+               
+            </div>
+            
             `
           )
           .join("")}
