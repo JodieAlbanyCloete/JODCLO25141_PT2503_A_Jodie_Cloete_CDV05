@@ -17,7 +17,7 @@ const contactInfo = {
 const app = document.getElementById("app");
 
 app.innerHTML = `
-  ${navbar()}
+ 
   ${hero()}
   ${about()}
   ${skillsSection()}
@@ -28,18 +28,18 @@ app.innerHTML = `
 
 // ----- COMPONENT FUNCTIONS -----
 
-function navbar() {
-  return `
-    <header class="navbar">
-      <nav>
-        <a href="#about">About me</a>
-        <a href="#skills">My skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contacts</a>
-      </nav>
-    </header>
-  `;
-}
+// function navbar() {
+//   return `
+//     <header class="navbar">
+//       <nav>
+//         <a href="#about">About me</a>
+//         <a href="#skills">My skills</a>
+//         <a href="#portfolio">Portfolio</a>
+//         <a href="#contact">Contacts</a>
+//       </nav>
+//     </header>
+//   `;
+// }
 
 function hero() {
   return `
